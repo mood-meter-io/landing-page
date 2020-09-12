@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/scss/app.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -43,11 +43,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
-  ],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/google-analytics'],
   /*
    ** Nuxt.js modules
    */
@@ -57,4 +53,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+
+  googleAnalytics: {
+    id: 'UA-177864961-1', // Used as fallback if no runtime config is provided
+  },
 }

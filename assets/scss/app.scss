@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  min-height: 100vh;
+  background-image: url("~assets/images/landingpage/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.5);
+  }
+}
+
+#__nuxt {
+  position: relative;
+  z-index: 1;
+}
