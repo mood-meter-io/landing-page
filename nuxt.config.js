@@ -47,7 +47,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/pwa'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
@@ -56,5 +56,14 @@ export default {
 
   googleAnalytics: {
     id: 'UA-177864961-1', // Used as fallback if no runtime config is provided
+  },
+
+  pwa: {
+    manifest: {
+      name: 'Mood Meter',
+      short_name: 'Mood Meter',
+      lang: 'en',
+      useWebmanifestExtension: false,
+    },
   },
 }
